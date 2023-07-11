@@ -1,3 +1,8 @@
+// const h1 = document.querySelector(`#main-title`)
+// console.log(h1)
+
+// const pTags = document.getElementsByTagName('p')
+// console.log(pTags)
 
 const pTag = document.querySelectorAll(`p`)
 console.log(pTag)
@@ -17,16 +22,12 @@ const newDiv = document.createElement(`div`)
 newDiv.setAttribute(`id`, `movie-posters`)
 bodyDiv.append(newDiv)
 
-
-
 // RENDER IMAGES/DESCRIPTION/TITLES
-
-
 
 const newImgOne = document.createElement(`img`)
 newImgOne.src = `https://i.pinimg.com/564x/25/27/28/25272819613523317c02ac13684cbe53.jpg`
-newDiv.append(newImgOne)
 newImgOne.setAttribute(`class`, `imgOne`)
+newDiv.append(newImgOne)
 const warDogsTitle = document.createElement(`h2`)
 warDogsTitle.innerText = `WAR DOGS`
 warDogsTitle.setAttribute(`class`, `imgOne`)
@@ -35,6 +36,9 @@ const newP = document.createElement(`p`)
 newP.textContent = `Serious movie with Jonah Hill`
 newP.setAttribute(`class`, `imgOne`)
 newDiv.appendChild(newP)
+
+const imgOne = document.querySelectorAll(`.imgOne`)
+
 
 
 
@@ -52,6 +56,7 @@ secondP.setAttribute(`class`, `imgTwo`)
 newDiv.appendChild(secondP)
 
 
+
 const newImgThree = document.createElement(`img`)
 newImgThree.src = `https://i.pinimg.com/736x/61/ff/30/61ff307a8dd88665b549092df0a64f6a.jpg`
 newImgThree.setAttribute(`class`, `imgThree`)
@@ -66,13 +71,12 @@ ThirdP.setAttribute(`class`, `imgThree`)
 newDiv.appendChild(ThirdP)
 
 
-// This code wraps each movie img, title & description in a div
-
 const newDivOne = document.createElement('div');
 newDivOne.setAttribute('class', 'imgOne');
 newDivOne.appendChild(newImgOne);
 newDivOne.appendChild(warDogsTitle);
 newDivOne.appendChild(newP);
+newDiv.appendChild(newDivOne);
 
 const newDivTwo = document.createElement('div');
 newDivTwo.setAttribute('class', 'imgTwo');
